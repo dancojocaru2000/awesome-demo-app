@@ -1,6 +1,6 @@
-.PHONY: all, clean
+.PHONY: all, static, clean
 
-all: out/awesome-demo-app
+all: static, out/awesome-demo-app
 
 obj/main.o: src/main.cpp
 	mkdir -p obj
@@ -14,6 +14,9 @@ obj/main.o: src/main.cpp
 out/awesome-demo-app: obj/main.o
 	mkdir -p out
 	g++ -o $@ $^
+
+static:
+	cp static/. out
 
 clean:
 	rm -r obj
