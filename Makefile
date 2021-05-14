@@ -12,7 +12,7 @@ obj/main.o: src/main.cpp
 	fi
 
 out/awesome-demo-app: obj/main.o
-	mkdir -o out
+	mkdir -p out
 	g++ -o $@ $^
 
 clean:
