@@ -5,9 +5,9 @@ all: out/awesome-demo-app
 obj/main.o: src/main.cpp
 	mkdir -p obj
 	if [ -z "$$VERSION" ];								\
-	then;												\
+	then												\
 		g++ -D PROGRAM_VERSION="$$VERSION" -c -o $@ $^;	\
-	else;												\
+	else												\
 		g++ -c -o $@ $^;								\
 	fi
 
