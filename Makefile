@@ -16,7 +16,7 @@ out/awesome-demo-app: obj/main.o
 	g++ -o $@ $^
 
 static:
-	cp static/. out
+	cp -r static/. out
 
 clean:
 	rm -r obj
