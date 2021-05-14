@@ -9,7 +9,7 @@
 using std::cout;
 using std::endl;
 
-const char[] program_version = STRINGIFY(PROGRAM_VERSION);
+const char program_version[] = STRINGIFY(PROGRAM_VERSION);
 
 int main() {
 	cout << "awesome-demo-app v" << program_version << endl;
